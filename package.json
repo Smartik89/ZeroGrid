@@ -1,0 +1,39 @@
+{
+  "name": "zgrid",
+  "version": "1.0.0",
+  "description": "A modern grid system using CSS3 Flexible Box(flexbox).",
+  "main": "zgrid.css",
+  "files": [
+    "zgrid.css",
+    "zgrid.min.css",
+    "zgrid.scss",
+    "zgrid.min.scss",
+    "_grid.scss",
+  ],
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awps/zGrid.git"
+  },
+  "keywords": [
+    "css",
+    "grid",
+    "system",
+    "flex",
+    "flexbox",
+    "responsive",
+    "scss",
+    "sass"
+  ],
+  "author": "Andrei Surdu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awps/zGrid/issues"
+  },
+  "homepage": "https://github.com/awps/zGrid#readme"
+}

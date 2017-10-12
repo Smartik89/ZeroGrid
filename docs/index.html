@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zGrid - A modern grid system using CSS3 Flexible Box(flexbox).</title>
+	<meta name="description" content="A modern grid system using CSS3 Flexible Box(flexbox).">
+	<!-- Normalize -->
+	<link rel="stylesheet" href="assets/normalize.css" />
+	<link rel="stylesheet" href="assets/demo.css" />
+	<link rel="stylesheet" href="assets/ztip.css" />
+	<link rel="stylesheet" href="zgrid.css" />
+</head>
+<body>
+	<div class="demo-header">
+		<h1>zGrid</h1>
+		<div class="subheading">A modern grid system using CSS3 Flexible Box(flexbox).</div>
+		<div class="demo-call-to-action">
+			<a class="github" href="https://github.com/awps/zGrid">
+				View on Github
+			</a>
+			<a class="download" href="https://github.com/awps/zGrid/archive/master.zip">
+				Download
+			</a>
+		</div>
+	</div>
+
+	<div class="demo-container">
+
+		<div class="zg">
+			<div class="cell-xs-6"><div class="incell"></div></div>
+			<div class="cell-xs-6"><div class="incell"></div></div>
+			<div class="cell-xs-7"><div class="incell"></div></div>
+			<div class="cell-xs-5"><div class="incell"></div></div>
+			<div class="cell-xs-8"><div class="incell"></div></div>
+			<div class="cell-xs-4"><div class="incell"></div></div>
+			<div class="cell-xs-9"><div class="incell"></div></div>
+			<div class="cell-xs-3"><div class="incell"></div></div>
+			<div class="cell-xs-10"><div class="incell"></div></div>
+			<div class="cell-xs-2"><div class="incell"></div></div>
+			<div class="cell-xs-11"><div class="incell"></div></div>
+			<div class="cell-xs-1"><div class="incell"></div></div>
+			<div class="cell-xs-12"><div class="incell"></div></div>
+		</div>
+
+		<h2 class="section-title">Installation
+			<p>Step by step install the plugin.</p>
+		</h2>
+
+		<h3>Install with <strong>npm</strong></h3>
+		<pre><code>
+npm install zgrid --save
+		</code></pre>
+
+		<p>or</p>
+
+		<h3>Install with <strong>yarn</strong></h3>
+		<pre><code>
+yarn add zgrid
+		</code></pre>
+
+		<p>or</p>
+
+		<h3>Manual install</h3>
+		<p>Download the most recent version from Github and include the unzipped files in your project. Use the top link on this page.</p>
+
+		<h2 class="section-title">How to use
+			<p>Some examples to help you dig faster ;).</p>
+		</h2>
+
+		<h3 class="section-title">It's easy
+			<p>All what you need is to wrap some elements in a <code>div</code> which has at least on class that contains <code>zg</code> subset.</p>
+		</h3>
+
+		<div class="demo-grid">
+			<div class="zg">
+				<div class="cell-sm-4"><div class="incell"></div></div>
+				<div class="cell-sm-4"><div class="incell"></div></div>
+				<div class="cell-sm-4"><div class="incell"></div></div>
+			</div>
+		</div>
+
+		<h3 class="section-title">It's really flexible
+			<p>Look at the following example. You decide what the columns do. They can change to any size depending on different screen sizes.</p>
+		</h3>
+
+		<div class="demo-grid">
+			<div class="zg">
+				<div class="cell-sm-7 cell-lg-4"><div class="incell"></div></div>
+				<div class="cell-sm-5 cell-lg-8"><div class="incell"></div></div>
+				<div class="cell--6 cell-xs-3"><div class="incell"></div></div>
+				<div class="cell--6 cell-xs-3"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-2"><div class="incell"></div></div>
+				<div class="cell--4 cell-xs-8"><div class="incell"></div></div>
+				<div class="cell--8 cell-xs-4"><div class="incell"></div></div>
+			</div>
+		</div>
+
+		<h3 class="section-title">Hide or show
+			<p>In this example you'll notice 3 <strong>colored</strong> cells that will hide or show when the screen size is changed.</p>
+		</h3>
+
+		<div class="demo-grid">
+			<div class="zg">
+				<div class="cell-xs-6  cell-xs-hide  cell-md-6  cell-sm-show  cell-lg-4"><div class="incell blue"></div></div>
+				<div class="cell--6    cell-sm-hide  cell-md-6  cell-md-show  cell-lg-4"><div class="incell green"></div></div>
+				<div class="cell--6    cell-md-hide  cell-md-4  cell-lg-show  cell-lg-4"><div class="incell orange"></div></div>
+			</div>
+		</div>
+
+		<h3 class="section-title">Horizontal align
+			<p>Use <code>?-left</code>, <code>?-center</code> or <code>?-right</code> to align the columns horizontally.</p>
+		</h3>
+		<div class="demo-grid">
+			<div class="zg--right zg-sm-left">
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+			</div>
+			<div class="zg--center">
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+			</div>
+			<div class="zg--left zg-sm-right">
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+			</div>
+		</div>
+
+		<h3 class="section-title">Vertical align
+			<p>Use <code>?-top</code>, <code>?-middle</code> or <code>?-bottom</code> to align the columns vertically.</p>
+		</h3>
+		<div class="demo-grid large">
+			<div class="zg-sm-top">
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+			</div>
+		</div>
+		<div class="demo-grid large">
+			<div class="zg-sm-middle">
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+			</div>
+		</div>
+		<div class="demo-grid large">
+			<div class="zg-sm-bottom">
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+			</div>
+		</div>
+
+		<h3 class="section-title">Individual vertical align
+			<p>Use <code>?-top</code>, <code>?-middle</code> or <code>?-bottom</code> to align the individual columns vertically.</p>
+		</h3>
+		<div class="demo-grid large">
+			<div class="zg">
+				<div class="cell-xs-4 cell-xs-top"><div class="incell"></div></div>
+				<div class="cell-xs-4 cell-xs-middle"><div class="incell"></div></div>
+				<div class="cell-xs-4 cell-xs-bottom"><div class="incell"></div></div>
+			</div>
+		</div>
+
+		<h3 class="section-title">Direction
+			<p>Columns direction can be set from left to right(default) <code>-ltr</code> or from right to left <code>-rtl</code></p>
+		</h3>
+		<div class="demo-grid">
+			<div class="zg-xs-rtl">
+				<div class="cell-xs-4"><div class="incell"> - 1 - </div></div>
+				<div class="cell-xs-4"><div class="incell"> - 2 - </div></div>
+				<div class="cell-xs-4"><div class="incell"> - 3 - </div></div>
+			</div>
+		</div>
+
+		<h3 class="section-title">No gutter
+			<p>Remove the space between columns. Use <code>-no-gutter</code> to remove the space between columns</p>
+		</h3>
+		<div class="demo-grid">
+			<div class="zg-xs-no-gutter">
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell alt"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+			</div>
+		</div>
+
+		<p><br>... and <code>-gutter</code> to restore it back.</p>
+		<div class="demo-grid">
+			<div class="zg-xs-no-gutter zg-md-gutter">
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell alt"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+			</div>
+		</div>
+
+		<p><br>... and <code>-gutter</code> to restore it back.</p>
+		<div class="demo-grid">
+			<div class="zg-xs-no-gutter zg-md-gutter">
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell alt"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+			</div>
+		</div>
+
+		<h3 class="section-title">Nested grids
+			<p>No problems. Go deeper and don't worry about content. It will fit correctly even if there are 10 nested grids.</p>
+		</h3>
+		<div class="demo-grid ignore">
+			<div class="zg">
+				<div class="cell-xs-6">
+					<div class="incell">
+						<div class="zg">
+							<div class="cell-xs-6"><div class="incell alt">
+								<div class="zg">
+									<div class="cell-xs-6"><div class="incell blue"></div></div>
+									<div class="cell-xs-6"><div class="incell blue"></div></div>
+								</div>
+							</div></div>
+							<div class="cell-xs-6"><div class="incell alt">
+								<div class="zg">
+									<div class="cell-xs-6"><div class="incell blue"></div></div>
+									<div class="cell-xs-6"><div class="incell blue"></div></div>
+								</div>
+							</div></div>
+						</div>
+					</div>
+				</div>
+				<div class="cell-xs-6"><div class="incell">
+					<div class="zg">
+						<div class="cell-xs-8"><div class="incell green"></div></div>
+						<div class="cell-xs-4"><div class="incell green"></div></div>
+						<div class="cell-xs-4"><div class="incell green"></div></div>
+						<div class="cell-xs-8"><div class="incell green"></div></div>
+					</div>
+				</div></div>
+			</div>
+		</div>
+
+<pre class="prettyprint"><code>
+&lt;div class="zg">
+
+	&lt;div class="cell-xs-6">
+		&lt;div class="zg">
+			&lt;div class="cell-xs-6">
+
+				&lt;div class="zg">
+					&lt;div class="cell-xs-6"> ...... &lt;/div>
+					&lt;div class="cell-xs-6"> ...... &lt;/div>
+				&lt;/div>
+
+			&lt;/div>
+			&lt;div class="cell-xs-6">
+
+				&lt;div class="zg">
+					&lt;div class="cell-xs-6"> ...... &lt;/div>
+					&lt;div class="cell-xs-6"> ...... &lt;/div>
+				&lt;/div>
+
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+
+	&lt;div class="cell-xs-6">
+		&lt;div class="zg">
+			&lt;div class="cell-xs-8"> ...... &lt;/div>
+			&lt;div class="cell-xs-4"> ...... &lt;/div>
+			&lt;div class="cell-xs-4"> ...... &lt;/div>
+			&lt;div class="cell-xs-8"> ...... &lt;/div>
+		&lt;/div>
+	&lt;/div>
+
+&lt;/div>
+</code></pre>
+
+
+		<h3 class="section-title">Fixed number of columns
+			<p>Sometimes you just want to set a number of columns and forget about it. You can do it.
+			</p>
+		</h3>
+
+		<p>Set one of the following class suffixes to grid container and only <code>cell</code> class to inner elements:</p>
+		<p>
+			<code>-6columns</code>,
+			<code>-5columns</code>,
+			<code>-4columns</code>,
+			<code>-3columns</code>,
+			<code>-2columns</code>,
+			<code>-1column</code>
+		</p>
+
+		<div class="demo-grid">
+			<div class="zg-xs-6columns">
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+			</div>
+
+			<div class="zg-xs-5columns">
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+			</div>
+
+			<div class="zg-xs-4columns">
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+			</div>
+
+			<div class="zg-xs-3columns">
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+			</div>
+
+			<div class="zg-xs-2columns">
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+			</div>
+
+			<div class="zg-xs-1column">
+				<div class="cell"><div class="incell"></div></div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="demo-footer">
+		<div class="social-buttons">
+			<!-- Place this tag where you want the button to render. -->
+			<!-- Place this tag where you want the button to render. -->
+			<a class="github-button" href="https://github.com/awps/zGrid/" data-size="large" data-show-count="true" aria-label="Star awps/zGrid on GitHub">Star</a>
+			<!-- Place this tag where you want the button to render. -->
+			<a class="github-button" href="https://github.com/awps/zGrid/fork" data-size="large" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork awps/zGrid on GitHub">Fork</a>
+
+			<!-- AddToAny BEGIN -->
+			<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+			<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+			<a class="a2a_button_facebook"></a>
+			<a class="a2a_button_twitter"></a>
+			<a class="a2a_button_google_plus"></a>
+			<a class="a2a_button_email"></a>
+			</div>
+			<script async src="https://static.addtoany.com/menu/page.js"></script>
+			<!-- AddToAny END -->
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/ztip.min.js"></script>
+
+	<script>
+		jQuery(document).ready( function() {
+			jQuery( '.demo-grid:not(.ignore)' ).each( function() {
+				var _t = $(this),
+				_content = _t[0].innerHTML;
+
+				_content =_content.replace( /\t\t\t/gi, '' )
+				                  .replace( /\t/gi, '   ' )
+				                  .replace( / orange| green| blue| alt/gi, '' )
+				                  .replace( /<div class=\"incell\">(.*?)<\/div>/gi, ' ...$1... ' );
+
+				_t.after( '<pre class="prettyprint"><code></code></pre>' );
+				_t.next( 'pre' ).children('code').text( _content );
+			} );
+
+			jQuery('.incell').zTip({
+				source: function( elem ){
+					return elem.parent().attr('class');
+				},
+				theme: 'white',
+			});
+		} );
+	</script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+	<!-- Place this tag in your head or just before your close body tag. -->
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
