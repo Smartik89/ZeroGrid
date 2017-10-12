@@ -8,7 +8,7 @@
     "zgrid.min.css",
     "zgrid.scss",
     "zgrid.min.scss",
-    "_grid.scss",
+    "_grid.scss"
   ],
   "directories": {
     "doc": "docs"
