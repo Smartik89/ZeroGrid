@@ -1,6 +1,6 @@
 {
   "name": "zgrid",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A modern grid system using CSS3 Flexible Box(flex-box).",
   "main": "zgrid.css",
   "files": [

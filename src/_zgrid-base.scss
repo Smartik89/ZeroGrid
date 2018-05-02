@@ -1,0 +1,337 @@
+$zg-space: 15px;
+$zg-nr-of-columns: 12;
+$zg-view-xs-string: xs;
+$zg-view-sm-string: sm;
+$zg-view-md-string: md;
+$zg-view-lg-string: lg;
+
+$zg-xs-size: 480px;
+$zg-sm-size: 768px;
+$zg-md-size: 980px;
+$zg-lg-size: 1200px;
+
+$zg-xs-size-min: $zg-xs-size + 1px;
+$zg-xs-size-max: $zg-sm-size + 1px;
+
+$zg-sm-size-min: $zg-sm-size + 1px;
+$zg-sm-size-max: $zg-md-size + 1px;
+
+$zg-md-size-min: $zg-md-size + 1px;
+$zg-md-size-max: $zg-lg-size + 1px;
+
+$zg-lg-size-min: $zg-lg-size + 1px;
+$zg-lg-size-max: $zg-lg-size + 1px;
+
+// ----------------------------------------------------------------------------
+// Mixin: Utils
+// ----------------------------------------------------------------------------
+@mixin zg-utils( $view ) {
+
+    /* Columns horizontal align
+    -------------------------*/
+    .zg-#{$view}-start {
+        justify-content: flex-start;
+    }
+    .zg-#{$view}-end {
+        justify-content: flex-end;
+    }
+    .zg-#{$view}-center {
+        justify-content: center;
+    }
+
+    /* Columns vertical align
+    ----------------------------------*/
+    .zg-#{$view}-top {
+        align-items: flex-start;
+    }
+    .zg-#{$view}-middle {
+        align-items: center;
+    }
+    .zg-#{$view}-bottom {
+        align-items: flex-end;
+    }
+
+    /* Spacing between columns
+    ------------------------*/
+    .zg-#{$view}-gutter {
+        margin-left: -$zg-space;
+        margin-right: -$zg-space;
+        > * {
+            padding-left: $zg-space;
+            padding-right: $zg-space;
+        }
+    }
+
+    .zg-#{$view}-min-gutter {
+        margin-left: -$zg-space / 3;
+        margin-right: -$zg-space / 3;
+        > * {
+            padding-left: $zg-space / 3;
+            padding-right: $zg-space / 3;
+        }
+    }
+
+    .zg-#{$view}-max-gutter {
+        margin-left: -$zg-space * 2;
+        margin-right: -$zg-space * 2;
+        > * {
+            padding-left: $zg-space * 2;
+            padding-right: $zg-space * 2;
+        }
+    }
+    .zg-#{$view}-no-gutter {
+        margin: 0;
+        > * {
+            padding: 0;
+        }
+    }
+
+    /* Vertical gutter
+    -----------------------------------------*/
+    .zg-#{$view}-v-gutter {
+        > * {
+            padding-top: $zg-space;
+            padding-bottom: $zg-space;
+        }
+    }
+
+    .zg-#{$view}-v-min-gutter {
+        > * {
+            padding-top: $zg-space / 3;
+            padding-bottom: $zg-space / 3;
+        }
+    }
+
+    .zg-#{$view}-v-max-gutter {
+        > * {
+            padding-top: $zg-space * 2;
+            padding-bottom: $zg-space * 2;
+        }
+    }
+    .zg-#{$view}-v-no-gutter {
+        > * {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    /* Columns horizontal direction
+    -----------------------------------------*/
+    .zg-#{$view}-row-reverse {
+        flex-direction: row-reverse;
+    }
+    .zg-#{$view}-row {
+        flex-direction: row;
+    }
+
+    /* Columns vertical direction
+    -----------------------------------------*/
+    .zg-#{$view}-column-reverse {
+        flex-direction: column-reverse;
+    }
+    .zg-#{$view}-column {
+        flex-direction: column;
+    }
+
+    // The vertical direction should set the columns to 100%.
+    .zg-#{$view}-column-reverse,
+    .zg-#{$view}-column {
+        > * {
+            max-width: 100% !important;
+        }
+        > [class*="cell-"] {
+            flex-grow: 1;
+        }
+    }
+
+    /* Spacing
+    -----------------------------------------*/
+    .zg-#{$view}-space-between {
+        justify-content: space-between;
+    }
+    .zg-#{$view}-space-around {
+        justify-content: space-around;
+    }
+
+    /* Columns wrapping in multiple lines
+    ------------------------------------------*/
+    .zg-#{$view}-nowrap {
+        flex-wrap: nowrap;
+    }
+    .zg-#{$view}-wrap {
+        flex-wrap: wrap;
+    }
+
+    /* Grid container, columns show or hide
+    --------------------------------------------*/
+    .zg-#{$view}-hide,
+    [class*="zg"] > .cell-#{$view}-hide {
+        display: none;
+    }
+    .zg-#{$view}-show,
+    [class*="zg"] > .cell-#{$view}-show {
+        display: inline;
+        display: initial;
+    }
+
+    /* Column self vertical align
+    ----------------------------------*/
+    [class*="zg"] > .cell-#{$view}-top {
+        align-self: flex-start;
+    }
+    [class*="zg"] > .cell-#{$view}-bottom {
+        align-self: flex-end;
+    }
+    [class*="zg"] > .cell-#{$view}-middle {
+        align-self: center;
+    }
+
+    /* Column width auto
+    -------------------------*/
+    [class*="zg"] > .cell-#{$view}-auto {
+        flex: 0 0 auto;
+    }
+
+    /* Text align
+    ------------------*/
+    .text-#{$view}-right {
+        text-align: right;
+    }
+    .text-#{$view}-left {
+        text-align: left;
+    }
+    .text-#{$view}-center {
+        text-align: center;
+    }
+
+}
+
+@mixin zg-gen( $device: '' ) {
+    $i: $zg-nr-of-columns;
+
+    @while $i > 0 {
+        $selectors: '';
+
+        @if ( $i > 1 and $i < 5 ) or $i == 6 {
+            $selectors: '.zg-#{$device}-#{$zg-nr-of-columns/$i}columns > .cell,';
+        } @else if $i == 12 {
+            $selectors: '.zg-#{$device}-#{$zg-nr-of-columns/$i}column > .cell,';
+        }
+
+        #{$selectors} [class*="zg"] > .cell-#{$device}-#{$i} {
+            flex-basis: $i * 100% / $zg-nr-of-columns;
+            @if not($modern) {
+                max-width: $i * 100% / $zg-nr-of-columns;
+            }
+        }
+
+        // 5 columns fixed grid
+        @if $i == 3 {
+            .zg-#{$device}-5columns > .cell {
+                flex-basis: percentage(1 / 5);
+                @if not($modern) {
+                    max-width: percentage(1 / 5);
+                }
+            }
+        }
+
+        $i: $i - 1;
+    }
+
+    @include zg-utils($device);
+}
+
+/*
+-------------------------------------------------------------------------------
+Common zg rules
+-------------------------------------------------------------------------------
+*/
+.zgrid {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: $zg-space;
+    padding-left: $zg-space;
+}
+
+[class*="zg"] {
+    &,
+    > [class*="zg"] {
+        list-style: none;
+        padding: 0;
+        margin: 0 (-$zg-space); // Parentheses are required. Else the subtraction from 0 will be executed.
+        min-height: 1px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+    }
+    &,
+    > [class*="zg"],
+    > .zg-flex {
+        display: flex;
+    }
+    > * {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    > *,
+    > [class*="zg"] {
+        list-style: none;
+        margin: 0;
+        float: none;
+        padding-left: $zg-space;
+        padding-right: $zg-space;
+        box-sizing: border-box;
+    }
+}
+
+.zg-as-table {
+    margin-bottom: 20px;
+    > * {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/*
+-------------------------------------------------------------------------------
+For any screen size
+-------------------------------------------------------------------------------
+*/
+@include zg-gen();
+
+/*
+-------------------------------------------------------------------------------
+For screen size >= #{$zg-xs-size-min}
+-------------------------------------------------------------------------------
+*/
+@media (min-width: $zg-xs-size-min) {
+    @include zg-gen($zg-view-xs-string);
+}
+
+/*
+-------------------------------------------------------------------------------
+For screen size >= #{$zg-sm-size-min}
+-------------------------------------------------------------------------------
+*/
+@media (min-width: $zg-sm-size-min) {
+    @include zg-gen($zg-view-sm-string);
+}
+
+/*
+-------------------------------------------------------------------------------
+For screen size >= #{$zg-md-size-min}
+-------------------------------------------------------------------------------
+*/
+@media (min-width: $zg-md-size-min) {
+    @include zg-gen($zg-view-md-string);
+}
+
+/*
+-------------------------------------------------------------------------------
+For screen size >= #{$zg-lg-size-min}
+-------------------------------------------------------------------------------
+*/
+@media (min-width: $zg-lg-size-min) {
+    @include zg-gen($zg-view-lg-string);
+}

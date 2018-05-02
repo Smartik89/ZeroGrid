@@ -28,6 +28,8 @@ var scss_files      = 'src/**/*.scss',
 gulp.task('compile_css', function () {
     compile_css();
     compile_css(true);
+    compile_css(false, true);
+    compile_css(true, true);
 });
 
 // CSS compile task
@@ -49,27 +51,37 @@ gulp.task('watch', function () {
 });
 
 // Compiler
-function compile_css(compressed) {
-    var out_style = 'expanded',
-        extension = '.css';
+function compile_css(compressed, modern) {
+    var out_style         = 'expanded',
+        extension         = '.css',
+        scss_file         = 'src/zgrid.scss',
+        autoprefixer_opts = {
+            browsers: ['last 5 versions'],
+        };
 
-    if (compressed) {
+    if (compressed === true) {
         out_style = 'compressed';
         extension = '.min.css';
+    }
+
+    if (modern) {
+        scss_file         = 'src/zgrid-modern.scss';
+        autoprefixer_opts = {
+            browsers: ['last 2 major versions'],
+            flexbox: false,
+        };
     }
 
     // Prepare the compile date
     var now      = new Date(),
         date_now = date.format(now, 'YYYY/MM/DD HH:mm:ss');
 
-    gulp.src(scss_files)
+    gulp.src(scss_file)
         .pipe(sass({
             outputStyle: out_style
         })
             .on('error', sass.logError))
-        .pipe(autoprefixer({
-            browsers: ['last 5 versions'],
-        }))
+        .pipe(autoprefixer(autoprefixer_opts))
         .pipe(header(banner, {pkg: pkg, date_now: date_now}))
         .pipe(rename({extname: extension}))
         .pipe(gulp.dest(css_dir));

@@ -27,23 +27,18 @@ Common zg rules
   padding: 0;
   margin: 0 -15px;
   min-height: 1px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 [class*="zg"],
 [class*="zg"] > [class*="zg"],
 [class*="zg"] > .zg-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 [class*="zg"] > * {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
   max-width: 100%;
 }
 
@@ -54,8 +49,7 @@ Common zg rules
   float: none;
   padding-left: 15px;
   padding-right: 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .zg-as-table {
@@ -74,121 +68,83 @@ For any screen size
 -------------------------------------------------------------------------------
 */
 .zg--1column > .cell, [class*="zg"] > .cell--12 {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  max-width: 100%;
+  flex-basis: 100%;
 }
 
 [class*="zg"] > .cell--11 {
-  -ms-flex-preferred-size: 91.66667%;
-      flex-basis: 91.66667%;
-  max-width: 91.66667%;
+  flex-basis: 91.66667%;
 }
 
 [class*="zg"] > .cell--10 {
-  -ms-flex-preferred-size: 83.33333%;
-      flex-basis: 83.33333%;
-  max-width: 83.33333%;
+  flex-basis: 83.33333%;
 }
 
 [class*="zg"] > .cell--9 {
-  -ms-flex-preferred-size: 75%;
-      flex-basis: 75%;
-  max-width: 75%;
+  flex-basis: 75%;
 }
 
 [class*="zg"] > .cell--8 {
-  -ms-flex-preferred-size: 66.66667%;
-      flex-basis: 66.66667%;
-  max-width: 66.66667%;
+  flex-basis: 66.66667%;
 }
 
 [class*="zg"] > .cell--7 {
-  -ms-flex-preferred-size: 58.33333%;
-      flex-basis: 58.33333%;
-  max-width: 58.33333%;
+  flex-basis: 58.33333%;
 }
 
 .zg--2columns > .cell, [class*="zg"] > .cell--6 {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  max-width: 50%;
+  flex-basis: 50%;
 }
 
 [class*="zg"] > .cell--5 {
-  -ms-flex-preferred-size: 41.66667%;
-      flex-basis: 41.66667%;
-  max-width: 41.66667%;
+  flex-basis: 41.66667%;
 }
 
 .zg--3columns > .cell, [class*="zg"] > .cell--4 {
-  -ms-flex-preferred-size: 33.33333%;
-      flex-basis: 33.33333%;
-  max-width: 33.33333%;
+  flex-basis: 33.33333%;
 }
 
 .zg--4columns > .cell, [class*="zg"] > .cell--3 {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
-  max-width: 25%;
+  flex-basis: 25%;
 }
 
 .zg--5columns > .cell {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  max-width: 20%;
+  flex-basis: 20%;
 }
 
 .zg--6columns > .cell, [class*="zg"] > .cell--2 {
-  -ms-flex-preferred-size: 16.66667%;
-      flex-basis: 16.66667%;
-  max-width: 16.66667%;
+  flex-basis: 16.66667%;
 }
 
 [class*="zg"] > .cell--1 {
-  -ms-flex-preferred-size: 8.33333%;
-      flex-basis: 8.33333%;
-  max-width: 8.33333%;
+  flex-basis: 8.33333%;
 }
 
 /* Columns horizontal align
     -------------------------*/
 .zg--start {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .zg--end {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .zg--center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 /* Columns vertical align
     ----------------------------------*/
 .zg--top {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 
 .zg--middle {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .zg--bottom {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 
 /* Spacing between columns
@@ -256,33 +212,21 @@ For any screen size
 /* Columns horizontal direction
     -----------------------------------------*/
 .zg--row-reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .zg--row {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 /* Columns vertical direction
     -----------------------------------------*/
 .zg--column-reverse {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 .zg--column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .zg--column-reverse > *,
@@ -292,34 +236,27 @@ For any screen size
 
 .zg--column-reverse > [class*="cell-"],
 .zg--column > [class*="cell-"] {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
 
 /* Spacing
     -----------------------------------------*/
 .zg--space-between {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .zg--space-around {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 /* Columns wrapping in multiple lines
     ------------------------------------------*/
 .zg--nowrap {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .zg--wrap {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 /* Grid container, columns show or hide
@@ -338,26 +275,21 @@ For any screen size
 /* Column self vertical align
     ----------------------------------*/
 [class*="zg"] > .cell--top {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 [class*="zg"] > .cell--bottom {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
 
 [class*="zg"] > .cell--middle {
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 /* Column width auto
     -------------------------*/
 [class*="zg"] > .cell--auto {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 /* Text align
@@ -381,103 +313,65 @@ For screen size >= 481px
 */
 @media (min-width: 481px) {
   .zg-xs-1column > .cell, [class*="zg"] > .cell-xs-12 {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    max-width: 100%;
+    flex-basis: 100%;
   }
   [class*="zg"] > .cell-xs-11 {
-    -ms-flex-preferred-size: 91.66667%;
-        flex-basis: 91.66667%;
-    max-width: 91.66667%;
+    flex-basis: 91.66667%;
   }
   [class*="zg"] > .cell-xs-10 {
-    -ms-flex-preferred-size: 83.33333%;
-        flex-basis: 83.33333%;
-    max-width: 83.33333%;
+    flex-basis: 83.33333%;
   }
   [class*="zg"] > .cell-xs-9 {
-    -ms-flex-preferred-size: 75%;
-        flex-basis: 75%;
-    max-width: 75%;
+    flex-basis: 75%;
   }
   [class*="zg"] > .cell-xs-8 {
-    -ms-flex-preferred-size: 66.66667%;
-        flex-basis: 66.66667%;
-    max-width: 66.66667%;
+    flex-basis: 66.66667%;
   }
   [class*="zg"] > .cell-xs-7 {
-    -ms-flex-preferred-size: 58.33333%;
-        flex-basis: 58.33333%;
-    max-width: 58.33333%;
+    flex-basis: 58.33333%;
   }
   .zg-xs-2columns > .cell, [class*="zg"] > .cell-xs-6 {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 50%;
   }
   [class*="zg"] > .cell-xs-5 {
-    -ms-flex-preferred-size: 41.66667%;
-        flex-basis: 41.66667%;
-    max-width: 41.66667%;
+    flex-basis: 41.66667%;
   }
   .zg-xs-3columns > .cell, [class*="zg"] > .cell-xs-4 {
-    -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
-    max-width: 33.33333%;
+    flex-basis: 33.33333%;
   }
   .zg-xs-4columns > .cell, [class*="zg"] > .cell-xs-3 {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    max-width: 25%;
+    flex-basis: 25%;
   }
   .zg-xs-5columns > .cell {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
-    max-width: 20%;
+    flex-basis: 20%;
   }
   .zg-xs-6columns > .cell, [class*="zg"] > .cell-xs-2 {
-    -ms-flex-preferred-size: 16.66667%;
-        flex-basis: 16.66667%;
-    max-width: 16.66667%;
+    flex-basis: 16.66667%;
   }
   [class*="zg"] > .cell-xs-1 {
-    -ms-flex-preferred-size: 8.33333%;
-        flex-basis: 8.33333%;
-    max-width: 8.33333%;
+    flex-basis: 8.33333%;
   }
   /* Columns horizontal align
     -------------------------*/
   .zg-xs-start {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
   .zg-xs-end {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
   }
   .zg-xs-center {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   /* Columns vertical align
     ----------------------------------*/
   .zg-xs-top {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
   .zg-xs-middle {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .zg-xs-bottom {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    align-items: flex-end;
   }
   /* Spacing between columns
     ------------------------*/
@@ -532,30 +426,18 @@ For screen size >= 481px
   /* Columns horizontal direction
     -----------------------------------------*/
   .zg-xs-row-reverse {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
   .zg-xs-row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   /* Columns vertical direction
     -----------------------------------------*/
   .zg-xs-column-reverse {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .zg-xs-column {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .zg-xs-column-reverse > *,
   .zg-xs-column > * {
@@ -563,30 +445,23 @@ For screen size >= 481px
   }
   .zg-xs-column-reverse > [class*="cell-"],
   .zg-xs-column > [class*="cell-"] {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
   }
   /* Spacing
     -----------------------------------------*/
   .zg-xs-space-between {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   .zg-xs-space-around {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   /* Columns wrapping in multiple lines
     ------------------------------------------*/
   .zg-xs-nowrap {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
   .zg-xs-wrap {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   /* Grid container, columns show or hide
     --------------------------------------------*/
@@ -602,23 +477,18 @@ For screen size >= 481px
   /* Column self vertical align
     ----------------------------------*/
   [class*="zg"] > .cell-xs-top {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    align-self: flex-start;
   }
   [class*="zg"] > .cell-xs-bottom {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    align-self: flex-end;
   }
   [class*="zg"] > .cell-xs-middle {
-    -ms-flex-item-align: center;
-        align-self: center;
+    align-self: center;
   }
   /* Column width auto
     -------------------------*/
   [class*="zg"] > .cell-xs-auto {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
   }
   /* Text align
     ------------------*/
@@ -640,103 +510,65 @@ For screen size >= 769px
 */
 @media (min-width: 769px) {
   .zg-sm-1column > .cell, [class*="zg"] > .cell-sm-12 {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    max-width: 100%;
+    flex-basis: 100%;
   }
   [class*="zg"] > .cell-sm-11 {
-    -ms-flex-preferred-size: 91.66667%;
-        flex-basis: 91.66667%;
-    max-width: 91.66667%;
+    flex-basis: 91.66667%;
   }
   [class*="zg"] > .cell-sm-10 {
-    -ms-flex-preferred-size: 83.33333%;
-        flex-basis: 83.33333%;
-    max-width: 83.33333%;
+    flex-basis: 83.33333%;
   }
   [class*="zg"] > .cell-sm-9 {
-    -ms-flex-preferred-size: 75%;
-        flex-basis: 75%;
-    max-width: 75%;
+    flex-basis: 75%;
   }
   [class*="zg"] > .cell-sm-8 {
-    -ms-flex-preferred-size: 66.66667%;
-        flex-basis: 66.66667%;
-    max-width: 66.66667%;
+    flex-basis: 66.66667%;
   }
   [class*="zg"] > .cell-sm-7 {
-    -ms-flex-preferred-size: 58.33333%;
-        flex-basis: 58.33333%;
-    max-width: 58.33333%;
+    flex-basis: 58.33333%;
   }
   .zg-sm-2columns > .cell, [class*="zg"] > .cell-sm-6 {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 50%;
   }
   [class*="zg"] > .cell-sm-5 {
-    -ms-flex-preferred-size: 41.66667%;
-        flex-basis: 41.66667%;
-    max-width: 41.66667%;
+    flex-basis: 41.66667%;
   }
   .zg-sm-3columns > .cell, [class*="zg"] > .cell-sm-4 {
-    -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
-    max-width: 33.33333%;
+    flex-basis: 33.33333%;
   }
   .zg-sm-4columns > .cell, [class*="zg"] > .cell-sm-3 {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    max-width: 25%;
+    flex-basis: 25%;
   }
   .zg-sm-5columns > .cell {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
-    max-width: 20%;
+    flex-basis: 20%;
   }
   .zg-sm-6columns > .cell, [class*="zg"] > .cell-sm-2 {
-    -ms-flex-preferred-size: 16.66667%;
-        flex-basis: 16.66667%;
-    max-width: 16.66667%;
+    flex-basis: 16.66667%;
   }
   [class*="zg"] > .cell-sm-1 {
-    -ms-flex-preferred-size: 8.33333%;
-        flex-basis: 8.33333%;
-    max-width: 8.33333%;
+    flex-basis: 8.33333%;
   }
   /* Columns horizontal align
     -------------------------*/
   .zg-sm-start {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
   .zg-sm-end {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
   }
   .zg-sm-center {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   /* Columns vertical align
     ----------------------------------*/
   .zg-sm-top {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
   .zg-sm-middle {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .zg-sm-bottom {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    align-items: flex-end;
   }
   /* Spacing between columns
     ------------------------*/
@@ -791,30 +623,18 @@ For screen size >= 769px
   /* Columns horizontal direction
     -----------------------------------------*/
   .zg-sm-row-reverse {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
   .zg-sm-row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   /* Columns vertical direction
     -----------------------------------------*/
   .zg-sm-column-reverse {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .zg-sm-column {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .zg-sm-column-reverse > *,
   .zg-sm-column > * {
@@ -822,30 +642,23 @@ For screen size >= 769px
   }
   .zg-sm-column-reverse > [class*="cell-"],
   .zg-sm-column > [class*="cell-"] {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
   }
   /* Spacing
     -----------------------------------------*/
   .zg-sm-space-between {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   .zg-sm-space-around {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   /* Columns wrapping in multiple lines
     ------------------------------------------*/
   .zg-sm-nowrap {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
   .zg-sm-wrap {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   /* Grid container, columns show or hide
     --------------------------------------------*/
@@ -861,23 +674,18 @@ For screen size >= 769px
   /* Column self vertical align
     ----------------------------------*/
   [class*="zg"] > .cell-sm-top {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    align-self: flex-start;
   }
   [class*="zg"] > .cell-sm-bottom {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    align-self: flex-end;
   }
   [class*="zg"] > .cell-sm-middle {
-    -ms-flex-item-align: center;
-        align-self: center;
+    align-self: center;
   }
   /* Column width auto
     -------------------------*/
   [class*="zg"] > .cell-sm-auto {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
   }
   /* Text align
     ------------------*/
@@ -899,103 +707,65 @@ For screen size >= 981px
 */
 @media (min-width: 981px) {
   .zg-md-1column > .cell, [class*="zg"] > .cell-md-12 {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    max-width: 100%;
+    flex-basis: 100%;
   }
   [class*="zg"] > .cell-md-11 {
-    -ms-flex-preferred-size: 91.66667%;
-        flex-basis: 91.66667%;
-    max-width: 91.66667%;
+    flex-basis: 91.66667%;
   }
   [class*="zg"] > .cell-md-10 {
-    -ms-flex-preferred-size: 83.33333%;
-        flex-basis: 83.33333%;
-    max-width: 83.33333%;
+    flex-basis: 83.33333%;
   }
   [class*="zg"] > .cell-md-9 {
-    -ms-flex-preferred-size: 75%;
-        flex-basis: 75%;
-    max-width: 75%;
+    flex-basis: 75%;
   }
   [class*="zg"] > .cell-md-8 {
-    -ms-flex-preferred-size: 66.66667%;
-        flex-basis: 66.66667%;
-    max-width: 66.66667%;
+    flex-basis: 66.66667%;
   }
   [class*="zg"] > .cell-md-7 {
-    -ms-flex-preferred-size: 58.33333%;
-        flex-basis: 58.33333%;
-    max-width: 58.33333%;
+    flex-basis: 58.33333%;
   }
   .zg-md-2columns > .cell, [class*="zg"] > .cell-md-6 {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 50%;
   }
   [class*="zg"] > .cell-md-5 {
-    -ms-flex-preferred-size: 41.66667%;
-        flex-basis: 41.66667%;
-    max-width: 41.66667%;
+    flex-basis: 41.66667%;
   }
   .zg-md-3columns > .cell, [class*="zg"] > .cell-md-4 {
-    -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
-    max-width: 33.33333%;
+    flex-basis: 33.33333%;
   }
   .zg-md-4columns > .cell, [class*="zg"] > .cell-md-3 {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    max-width: 25%;
+    flex-basis: 25%;
   }
   .zg-md-5columns > .cell {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
-    max-width: 20%;
+    flex-basis: 20%;
   }
   .zg-md-6columns > .cell, [class*="zg"] > .cell-md-2 {
-    -ms-flex-preferred-size: 16.66667%;
-        flex-basis: 16.66667%;
-    max-width: 16.66667%;
+    flex-basis: 16.66667%;
   }
   [class*="zg"] > .cell-md-1 {
-    -ms-flex-preferred-size: 8.33333%;
-        flex-basis: 8.33333%;
-    max-width: 8.33333%;
+    flex-basis: 8.33333%;
   }
   /* Columns horizontal align
     -------------------------*/
   .zg-md-start {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
   .zg-md-end {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
   }
   .zg-md-center {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   /* Columns vertical align
     ----------------------------------*/
   .zg-md-top {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
   .zg-md-middle {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .zg-md-bottom {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    align-items: flex-end;
   }
   /* Spacing between columns
     ------------------------*/
@@ -1050,30 +820,18 @@ For screen size >= 981px
   /* Columns horizontal direction
     -----------------------------------------*/
   .zg-md-row-reverse {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
   .zg-md-row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   /* Columns vertical direction
     -----------------------------------------*/
   .zg-md-column-reverse {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .zg-md-column {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .zg-md-column-reverse > *,
   .zg-md-column > * {
@@ -1081,30 +839,23 @@ For screen size >= 981px
   }
   .zg-md-column-reverse > [class*="cell-"],
   .zg-md-column > [class*="cell-"] {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
   }
   /* Spacing
     -----------------------------------------*/
   .zg-md-space-between {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   .zg-md-space-around {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   /* Columns wrapping in multiple lines
     ------------------------------------------*/
   .zg-md-nowrap {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
   .zg-md-wrap {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   /* Grid container, columns show or hide
     --------------------------------------------*/
@@ -1120,23 +871,18 @@ For screen size >= 981px
   /* Column self vertical align
     ----------------------------------*/
   [class*="zg"] > .cell-md-top {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    align-self: flex-start;
   }
   [class*="zg"] > .cell-md-bottom {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    align-self: flex-end;
   }
   [class*="zg"] > .cell-md-middle {
-    -ms-flex-item-align: center;
-        align-self: center;
+    align-self: center;
   }
   /* Column width auto
     -------------------------*/
   [class*="zg"] > .cell-md-auto {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
   }
   /* Text align
     ------------------*/
@@ -1158,103 +904,65 @@ For screen size >= 1201px
 */
 @media (min-width: 1201px) {
   .zg-lg-1column > .cell, [class*="zg"] > .cell-lg-12 {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    max-width: 100%;
+    flex-basis: 100%;
   }
   [class*="zg"] > .cell-lg-11 {
-    -ms-flex-preferred-size: 91.66667%;
-        flex-basis: 91.66667%;
-    max-width: 91.66667%;
+    flex-basis: 91.66667%;
   }
   [class*="zg"] > .cell-lg-10 {
-    -ms-flex-preferred-size: 83.33333%;
-        flex-basis: 83.33333%;
-    max-width: 83.33333%;
+    flex-basis: 83.33333%;
   }
   [class*="zg"] > .cell-lg-9 {
-    -ms-flex-preferred-size: 75%;
-        flex-basis: 75%;
-    max-width: 75%;
+    flex-basis: 75%;
   }
   [class*="zg"] > .cell-lg-8 {
-    -ms-flex-preferred-size: 66.66667%;
-        flex-basis: 66.66667%;
-    max-width: 66.66667%;
+    flex-basis: 66.66667%;
   }
   [class*="zg"] > .cell-lg-7 {
-    -ms-flex-preferred-size: 58.33333%;
-        flex-basis: 58.33333%;
-    max-width: 58.33333%;
+    flex-basis: 58.33333%;
   }
   .zg-lg-2columns > .cell, [class*="zg"] > .cell-lg-6 {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 50%;
   }
   [class*="zg"] > .cell-lg-5 {
-    -ms-flex-preferred-size: 41.66667%;
-        flex-basis: 41.66667%;
-    max-width: 41.66667%;
+    flex-basis: 41.66667%;
   }
   .zg-lg-3columns > .cell, [class*="zg"] > .cell-lg-4 {
-    -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
-    max-width: 33.33333%;
+    flex-basis: 33.33333%;
   }
   .zg-lg-4columns > .cell, [class*="zg"] > .cell-lg-3 {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    max-width: 25%;
+    flex-basis: 25%;
   }
   .zg-lg-5columns > .cell {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
-    max-width: 20%;
+    flex-basis: 20%;
   }
   .zg-lg-6columns > .cell, [class*="zg"] > .cell-lg-2 {
-    -ms-flex-preferred-size: 16.66667%;
-        flex-basis: 16.66667%;
-    max-width: 16.66667%;
+    flex-basis: 16.66667%;
   }
   [class*="zg"] > .cell-lg-1 {
-    -ms-flex-preferred-size: 8.33333%;
-        flex-basis: 8.33333%;
-    max-width: 8.33333%;
+    flex-basis: 8.33333%;
   }
   /* Columns horizontal align
     -------------------------*/
   .zg-lg-start {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
   .zg-lg-end {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
   }
   .zg-lg-center {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   /* Columns vertical align
     ----------------------------------*/
   .zg-lg-top {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
   .zg-lg-middle {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .zg-lg-bottom {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    align-items: flex-end;
   }
   /* Spacing between columns
     ------------------------*/
@@ -1309,30 +1017,18 @@ For screen size >= 1201px
   /* Columns horizontal direction
     -----------------------------------------*/
   .zg-lg-row-reverse {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
   .zg-lg-row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   /* Columns vertical direction
     -----------------------------------------*/
   .zg-lg-column-reverse {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .zg-lg-column {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .zg-lg-column-reverse > *,
   .zg-lg-column > * {
@@ -1340,30 +1036,23 @@ For screen size >= 1201px
   }
   .zg-lg-column-reverse > [class*="cell-"],
   .zg-lg-column > [class*="cell-"] {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
   }
   /* Spacing
     -----------------------------------------*/
   .zg-lg-space-between {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   .zg-lg-space-around {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   /* Columns wrapping in multiple lines
     ------------------------------------------*/
   .zg-lg-nowrap {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
   .zg-lg-wrap {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   /* Grid container, columns show or hide
     --------------------------------------------*/
@@ -1379,23 +1068,18 @@ For screen size >= 1201px
   /* Column self vertical align
     ----------------------------------*/
   [class*="zg"] > .cell-lg-top {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    align-self: flex-start;
   }
   [class*="zg"] > .cell-lg-bottom {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    align-self: flex-end;
   }
   [class*="zg"] > .cell-lg-middle {
-    -ms-flex-item-align: center;
-        align-self: center;
+    align-self: center;
   }
   /* Column width auto
     -------------------------*/
   [class*="zg"] > .cell-lg-auto {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
   }
   /* Text align
     ------------------*/

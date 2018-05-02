@@ -10,6 +10,9 @@ A modern grid system using CSS3 Flexible Box(flex-box).
 
 ### Changelog:
 
+**2.0.2**
+* New: Added the modern version of grid, without support for Internet Explorer and other old browsers.
+
 **2.0.1**
  * New: Use the prefix `-v` to add vertical gutter as well. Example`.zg-{?}-v-min-gutter`.
 
@@ -29,7 +32,6 @@ A modern grid system using CSS3 Flexible Box(flex-box).
  _Other_
  * Demo style ported from LESS to SCSS.
  * Files are processed by Gulp. Prepros is removed from project.
- * All scss files are removed. Now all source code is contained only in `src/ztip.scss`.
  
 **1.0.0**
  * Initial release
