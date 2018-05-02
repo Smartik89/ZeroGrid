@@ -1,14 +1,3 @@
-/**
- * zGrid
- *
- * Description : A modern grid system using CSS3 Flexible Box(flex-box).
- * Website     : http://zgrid.zerowp.com
- * Version     : 1.0.1
- * License     : MIT
- * Author      : Andrei Surdu
- *
- */
-
 $zg-space: 15px;
 $zg-nr-of-columns: 12;
 $zg-view-xs-string: xs;
@@ -40,10 +29,10 @@ $zg-lg-size-max: $zg-lg-size + 1px;
 
 	/* Columns horizontal align
 	-------------------------*/
-	.zg-#{$view}-left {
+	.zg-#{$view}-start {
 		justify-content: flex-start;
 	}
-	.zg-#{$view}-right {
+	.zg-#{$view}-end {
 		justify-content: flex-end;
 	}
 	.zg-#{$view}-center {
@@ -62,14 +51,8 @@ $zg-lg-size-max: $zg-lg-size + 1px;
 		align-items: flex-end;
 	}
 
-	/* Collapse
+	/* Spacing between columns
 	------------------------*/
-	.zg-#{$view}-no-gutter {
-		margin: 0;
-		> * {
-			padding: 0;
-		}
-	}
 	.zg-#{$view}-gutter {
 		margin-left: -$zg-space;
 		margin-right: -$zg-space;
@@ -79,13 +62,66 @@ $zg-lg-size-max: $zg-lg-size + 1px;
 		}
 	}
 
+	.zg-#{$view}-min-gutter {
+		margin-left: -$zg-space / 3;
+		margin-right: -$zg-space / 3;
+		> * {
+			padding-left: $zg-space / 3;
+			padding-right: $zg-space / 3;
+		}
+	}
+
+	.zg-#{$view}-max-gutter {
+		margin-left: -$zg-space * 2;
+		margin-right: -$zg-space * 2;
+		> * {
+			padding-left: $zg-space * 2;
+			padding-right: $zg-space * 2;
+		}
+	}
+	.zg-#{$view}-no-gutter {
+		margin: 0;
+		> * {
+			padding: 0;
+		}
+	}
+
 	/* Columns horizontal direction
 	-----------------------------------------*/
-	.zg-#{$view}-rtl {
+	.zg-#{$view}-row-reverse {
 		flex-direction: row-reverse;
 	}
-	.zg-#{$view}-ltr {
+	.zg-#{$view}-row {
 		flex-direction: row;
+	}
+
+	/* Columns vertical direction
+	-----------------------------------------*/
+	.zg-#{$view}-column-reverse {
+		flex-direction: column-reverse;
+	}
+	.zg-#{$view}-column {
+		flex-direction: column;
+	}
+
+	// The vertical direction should set the columns to 100%.
+	.zg-#{$view}-column-reverse,
+	.zg-#{$view}-column {
+		> * {
+			max-width: 100% !important;
+		}
+		> [class*="cell-"] {
+			flex-grow: 1;
+		}
+	}
+
+	/* Spacing
+	-----------------------------------------*/
+	.zg-#{$view}-space-between {
+		justify-content: space-between;
+	}
+	.zg-#{$view}-space-around {
+		justify-content: space-around;
 	}
 
 	/* Columns wrapping in multiple lines
@@ -190,7 +226,7 @@ Common zg rules
 	> [class*="zg"] {
 		list-style: none;
 		padding: 0;
-		margin: 0 -$zg-space;
+		margin: 0 (-$zg-space);// Parentheses are required. Else the subtraction from 0 will be executed.
 		min-height: 1px;
 		box-sizing: border-box;
 		flex-wrap: wrap;

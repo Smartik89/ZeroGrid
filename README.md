@@ -1,7 +1,7 @@
 ### zGrid
 ---
 
-A modern grid system using CSS3 Flexible Box(flexbox). The gzipped CSS is ~1.5KB. Isn't it awesome?
+A modern grid system using CSS3 Flexible Box(flex-box).
 
 #### Demo and docs: http://zgrid.zerowp.com/
 #### License: MIT
@@ -10,6 +10,24 @@ A modern grid system using CSS3 Flexible Box(flexbox). The gzipped CSS is ~1.5KB
 
 ### Changelog:
 
+**2.0.0**
+ * New: `.zg-{?}-min-gutter` for less space between columns.
+ * New: `.zg-{?}-max-gutter` for more space between columns.
+ * New: `.zg-{?}-space-between` Distribute items evenly. Items have a half-size space on either end.
+ * New: `.zg-{?}-space-around` Distribute items evenly. The first item is flush with the start, the last is flush with the end.
+ * Modified: `.zg-{?}-left` now it's `.zg-{?}-start` because it can be used to arrange the columns when they are in vertical direction.
+ * Modified: `.zg-{?}-right` now it's `.zg-{?}-end` because it can be used to arrange the columns when they are in vertical direction.
+ * Modified: `.zg-{?}-ltr` now it's `.zg-{?}-row`.
+ * Modified: `.zg-{?}-rtl` now it's `.zg-{?}-row-reverse`. 
+ * New: `.zg-{?}-column` display the columns in vertical order.
+ * New: `.zg-{?}-column-reverse` display the columns in vertical order but in reverse order.
+ * Source files are moved in `src` folder. Distributable files are moved in `dist` folder.
+ 
+ _Other_
+ * Demo style ported from LESS to SCSS.
+ * Files are processed by Gulp. Prepros is removed from project.
+ * All scss files are removed. Now all source code is contained only in `src/ztip.scss`.
+ 
 **1.0.0**
  * Initial release
 

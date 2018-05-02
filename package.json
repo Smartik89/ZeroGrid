@@ -1,14 +1,11 @@
 {
   "name": "zgrid",
-  "version": "1.0.0",
-  "description": "A modern grid system using CSS3 Flexible Box(flexbox).",
+  "version": "2.0.0",
+  "description": "A modern grid system using CSS3 Flexible Box(flex-box).",
   "main": "zgrid.css",
   "files": [
-    "zgrid.css",
-    "zgrid.min.css",
-    "zgrid.scss",
-    "zgrid.min.scss",
-    "_grid.scss"
+    "dist",
+    "src"
   ],
   "directories": {
     "doc": "docs"
@@ -25,6 +22,7 @@
     "grid",
     "system",
     "flex",
+    "flex-box",
     "flexbox",
     "responsive",
     "scss",
@@ -35,5 +33,13 @@
   "bugs": {
     "url": "https://github.com/awps/zGrid/issues"
   },
-  "homepage": "https://github.com/awps/zGrid#readme"
+  "homepage": "http://zgrid.zerowp.com",
+  "devDependencies": {
+    "date-and-time": "^0.6.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-header": "^2.0.5",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1"
+  }
 }

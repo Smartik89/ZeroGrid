@@ -67,7 +67,7 @@ yarn add zgrid
 		</h2>
 
 		<h3 class="section-title">It's easy
-			<p>All what you need is to wrap some elements in a <code>div</code> which has at least on class that contains <code>zg</code> subset.</p>
+			<p>All what you need is to wrap some elements in a <code>div</code> which has at least one class that contains <code>zg</code> subset.</p>
 		</h3>
 
 		<div class="demo-grid">
@@ -108,10 +108,10 @@ yarn add zgrid
 		</div>
 
 		<h3 class="section-title">Horizontal align
-			<p>Use <code>?-left</code>, <code>?-center</code> or <code>?-right</code> to align the columns horizontally.</p>
+			<p>Use <code>?-start</code>, <code>?-center</code> or <code>?-end</code> to align the columns horizontally.</p>
 		</h3>
 		<div class="demo-grid">
-			<div class="zg--right zg-sm-left">
+			<div class="zg--end zg-sm-start">
 				<div class="cell-xs-4"><div class="incell"></div></div>
 				<div class="cell-xs-4"><div class="incell"></div></div>
 			</div>
@@ -119,7 +119,7 @@ yarn add zgrid
 				<div class="cell-xs-4"><div class="incell"></div></div>
 				<div class="cell-xs-4"><div class="incell"></div></div>
 			</div>
-			<div class="zg--left zg-sm-right">
+			<div class="zg--start zg-sm-end">
 				<div class="cell-xs-4"><div class="incell"></div></div>
 				<div class="cell-xs-4"><div class="incell"></div></div>
 			</div>
@@ -161,14 +161,71 @@ yarn add zgrid
 			</div>
 		</div>
 
-		<h3 class="section-title">Direction
-			<p>Columns direction can be set from left to right(default) <code>-ltr</code> or from right to left <code>-rtl</code></p>
+		<h3 class="section-title">Horizontal direction
+			<p>Columns direction can be set from left to right(default) <code>-row</code> or from right to left <code>-row-reverse</code></p>
 		</h3>
 		<div class="demo-grid">
-			<div class="zg-xs-rtl">
+			<div class="zg-xs-row-reverse">
 				<div class="cell-xs-4"><div class="incell"> - 1 - </div></div>
 				<div class="cell-xs-4"><div class="incell"> - 2 - </div></div>
 				<div class="cell-xs-4"><div class="incell"> - 3 - </div></div>
+			</div>
+		</div>
+
+		<p><br>... use <code>-row</code> to restore it back to normal direction.</p>
+		<div class="demo-grid">
+			<div class="zg-xs-row-reverse zg-md-row">
+				<div class="cell-xs-4"><div class="incell"> - 1 - </div></div>
+				<div class="cell-xs-4"><div class="incell"> - 2 - </div></div>
+				<div class="cell-xs-4"><div class="incell"> - 3 - </div></div>
+			</div>
+		</div>
+
+		<h3 class="section-title">Spacing around
+			<p>Use <code>?-space-around</code> to distribute items evenly.
+				Items have a half-size space on either end.</p>
+		</h3>
+		<div class="demo-grid">
+			<div class="zg--space-around">
+				<div class="cell-xs-2"><div class="incell"></div></div>
+				<div class="cell-xs-2"><div class="incell"></div></div>
+				<div class="cell-xs-2"><div class="incell"></div></div>
+				<div class="cell-xs-2"><div class="incell"></div></div>
+			</div>
+		</div>
+
+		<h3 class="section-title">Spacing between
+			<p>Use <code>?-space-between</code> to distribute items evenly.
+				The first item is flush with the start, the last is flush with the end.</p>
+		</h3>
+		<div class="demo-grid">
+			<div class="zg--space-between">
+				<div class="cell-xs-2"><div class="incell"></div></div>
+				<div class="cell-xs-2"><div class="incell"></div></div>
+				<div class="cell-xs-2"><div class="incell"></div></div>
+				<div class="cell-xs-2"><div class="incell"></div></div>
+			</div>
+		</div>
+
+		<h3 class="section-title">Min gutter
+			<p>Keep the space between columns at the minimum. Use <code>-min-gutter</code></p>
+		</h3>
+		<div class="demo-grid">
+			<div class="zg-xs-min-gutter">
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell alt"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
+			</div>
+		</div>
+
+		<h3 class="section-title">Max gutter
+			<p>Keep the space between columns at the maximum. Use <code>-max-gutter</code></p>
+		</h3>
+		<div class="demo-grid">
+			<div class="zg-xs-max-gutter">
+				<div class="cell-xs-4"><div class="incell"></div></div>
+				<div class="cell-xs-4"><div class="incell alt"></div></div>
+				<div class="cell-xs-4"><div class="incell"></div></div>
 			</div>
 		</div>
 
@@ -318,6 +375,94 @@ yarn add zgrid
 				<div class="cell"><div class="incell"></div></div>
 			</div>
 		</div>
+
+
+<h3 class="section-title">Vertical direction
+	<p>It's possible to display the columns in a vertical direction.</p>
+</h3>
+<div class="zg-xs-2columns">
+	<div class="cell">
+		<p><br>... use <code>-column-reverse</code>.</p>
+		<div class="demo-grid">
+			<div class="zg-xs-column-reverse">
+				<div class="cell-xs-4"><div class="incell"> - 1 - </div></div>
+				<div class="cell-xs-4"><div class="incell"> - 2 - </div></div>
+				<div class="cell-xs-4"><div class="incell"> - 3 - </div></div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
+		<p><br>... use <code>-column</code> to restore it back to normal direction.</p>
+		<div class="demo-grid">
+			<div class="zg-xs-column-reverse zg-md-column">
+				<div class="cell-xs-4"><div class="incell"> - 1 - </div></div>
+				<div class="cell-xs-4"><div class="incell"> - 2 - </div></div>
+				<div class="cell-xs-4"><div class="incell"> - 3 - </div></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h3 class="section-title">Vertical distribution
+	<p>Use <code>-space-between</code>,
+		<code>-space-around</code>,
+		<code>-start</code>,
+		<code>-center</code>,
+		<code>-end</code> just like you would do in horizontal mode.</p>
+</h3>
+<div class="zg-xs-3columns">
+	<div class="cell">
+		<p><strong>Normal <em><small>( optional <code>-start</code>)</small></em></strong></p>
+		<div class="demo-grid for-column-dir">
+			<div class="zg-xs-column zg-xs-start">
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
+		<p><strong>Center <code>-center</code></strong></p>
+		<div class="demo-grid for-column-dir">
+			<div class="zg-xs-column zg-xs-center">
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
+		<p><strong>From end <code>-end</code></strong></p>
+		<div class="demo-grid for-column-dir">
+			<div class="zg-xs-column zg-xs-end">
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+				<div class="cell"><div class="incell"></div></div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
+		<p><strong>Space between <code>-space-between</code></strong></p>
+		<div class="demo-grid for-column-dir">
+			<div class="zg-xs-column zg-xs-space-between">
+				<div class="cell"><div class="incell for-column-dir"></div></div>
+				<div class="cell"><div class="incell for-column-dir"></div></div>
+				<div class="cell"><div class="incell for-column-dir"></div></div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
+		<p><strong>Space around <code>-space-around</code></strong></p>
+		<div class="demo-grid for-column-dir">
+			<div class="zg-xs-column zg-xs-space-around">
+				<div class="cell"><div class="incell for-column-dir"></div></div>
+				<div class="cell"><div class="incell for-column-dir"></div></div>
+				<div class="cell"><div class="incell for-column-dir"></div></div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 	</div>
 
