@@ -5,7 +5,7 @@
  * Author   : Andrei Surdu
  * License  : MIT
  * Version  : 2.0.0
- * Compiled : 2018/05/02 18:05:16
+ * Compiled : 2018/05/02 19:07:03
  */
 
 /*
@@ -229,6 +229,28 @@ For any screen size
 
 .zg--no-gutter > * {
   padding: 0;
+}
+
+/* Vertical gutter
+	-----------------------------------------*/
+.zg--v-gutter > * {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.zg--v-min-gutter > * {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.zg--v-max-gutter > * {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.zg--v-no-gutter > * {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Columns horizontal direction
@@ -489,6 +511,24 @@ For screen size >= 481px
   .zg-xs-no-gutter > * {
     padding: 0;
   }
+  /* Vertical gutter
+	-----------------------------------------*/
+  .zg-xs-v-gutter > * {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .zg-xs-v-min-gutter > * {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .zg-xs-v-max-gutter > * {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .zg-xs-v-no-gutter > * {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   /* Columns horizontal direction
 	-----------------------------------------*/
   .zg-xs-row-reverse {
@@ -729,6 +769,24 @@ For screen size >= 769px
   }
   .zg-sm-no-gutter > * {
     padding: 0;
+  }
+  /* Vertical gutter
+	-----------------------------------------*/
+  .zg-sm-v-gutter > * {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .zg-sm-v-min-gutter > * {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .zg-sm-v-max-gutter > * {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .zg-sm-v-no-gutter > * {
+    padding-top: 0;
+    padding-bottom: 0;
   }
   /* Columns horizontal direction
 	-----------------------------------------*/
@@ -971,6 +1029,24 @@ For screen size >= 981px
   .zg-md-no-gutter > * {
     padding: 0;
   }
+  /* Vertical gutter
+	-----------------------------------------*/
+  .zg-md-v-gutter > * {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .zg-md-v-min-gutter > * {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .zg-md-v-max-gutter > * {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .zg-md-v-no-gutter > * {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   /* Columns horizontal direction
 	-----------------------------------------*/
   .zg-md-row-reverse {
@@ -1211,6 +1287,24 @@ For screen size >= 1201px
   }
   .zg-lg-no-gutter > * {
     padding: 0;
+  }
+  /* Vertical gutter
+	-----------------------------------------*/
+  .zg-lg-v-gutter > * {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .zg-lg-v-min-gutter > * {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .zg-lg-v-max-gutter > * {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .zg-lg-v-no-gutter > * {
+    padding-top: 0;
+    padding-bottom: 0;
   }
   /* Columns horizontal direction
 	-----------------------------------------*/

@@ -10,6 +10,9 @@ A modern grid system using CSS3 Flexible Box(flex-box).
 
 ### Changelog:
 
+**2.0.1**
+ * New: Use the prefix `-v` to add vertical gutter as well. Example`.zg-{?}-v-min-gutter`.
+
 **2.0.0**
  * New: `.zg-{?}-min-gutter` for less space between columns.
  * New: `.zg-{?}-max-gutter` for more space between columns.

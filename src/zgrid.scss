@@ -86,6 +86,35 @@ $zg-lg-size-max: $zg-lg-size + 1px;
 		}
 	}
 
+	/* Vertical gutter
+	-----------------------------------------*/
+	.zg-#{$view}-v-gutter {
+		> * {
+			padding-top: $zg-space;
+			padding-bottom: $zg-space;
+		}
+	}
+
+	.zg-#{$view}-v-min-gutter {
+		> * {
+			padding-top: $zg-space / 3;
+			padding-bottom: $zg-space / 3;
+		}
+	}
+
+	.zg-#{$view}-v-max-gutter {
+		> * {
+			padding-top: $zg-space * 2;
+			padding-bottom: $zg-space * 2;
+		}
+	}
+	.zg-#{$view}-v-no-gutter {
+		> * {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
 	/* Columns horizontal direction
 	-----------------------------------------*/
 	.zg-#{$view}-row-reverse {
