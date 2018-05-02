@@ -4,8 +4,8 @@
  * Homepage : http://zgrid.zerowp.com
  * Author   : Andrei Surdu
  * License  : MIT
- * Version  : 2.0.0
- * Compiled : 2018/05/02 19:07:03
+ * Version  : 2.0.1
+ * Compiled : 2018/05/02 19:36:55
  */
 
 /*
@@ -152,7 +152,7 @@ For any screen size
 }
 
 /* Columns horizontal align
-	-------------------------*/
+    -------------------------*/
 .zg--start {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -172,7 +172,7 @@ For any screen size
 }
 
 /* Columns vertical align
-	----------------------------------*/
+    ----------------------------------*/
 .zg--top {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -192,7 +192,7 @@ For any screen size
 }
 
 /* Spacing between columns
-	------------------------*/
+    ------------------------*/
 .zg--gutter {
   margin-left: -15px;
   margin-right: -15px;
@@ -232,7 +232,7 @@ For any screen size
 }
 
 /* Vertical gutter
-	-----------------------------------------*/
+    -----------------------------------------*/
 .zg--v-gutter > * {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -254,7 +254,7 @@ For any screen size
 }
 
 /* Columns horizontal direction
-	-----------------------------------------*/
+    -----------------------------------------*/
 .zg--row-reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -270,7 +270,7 @@ For any screen size
 }
 
 /* Columns vertical direction
-	-----------------------------------------*/
+    -----------------------------------------*/
 .zg--column-reverse {
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
@@ -298,7 +298,7 @@ For any screen size
 }
 
 /* Spacing
-	-----------------------------------------*/
+    -----------------------------------------*/
 .zg--space-between {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -311,7 +311,7 @@ For any screen size
 }
 
 /* Columns wrapping in multiple lines
-	------------------------------------------*/
+    ------------------------------------------*/
 .zg--nowrap {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
@@ -323,7 +323,7 @@ For any screen size
 }
 
 /* Grid container, columns show or hide
-	--------------------------------------------*/
+    --------------------------------------------*/
 .zg--hide,
 [class*="zg"] > .cell--hide {
   display: none;
@@ -336,7 +336,7 @@ For any screen size
 }
 
 /* Column self vertical align
-	----------------------------------*/
+    ----------------------------------*/
 [class*="zg"] > .cell--top {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -353,7 +353,7 @@ For any screen size
 }
 
 /* Column width auto
-	-------------------------*/
+    -------------------------*/
 [class*="zg"] > .cell--auto {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -361,7 +361,7 @@ For any screen size
 }
 
 /* Text align
-	------------------*/
+    ------------------*/
 .text--right {
   text-align: right;
 }
@@ -446,7 +446,7 @@ For screen size >= 481px
     max-width: 8.33333%;
   }
   /* Columns horizontal align
-	-------------------------*/
+    -------------------------*/
   .zg-xs-start {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -463,7 +463,7 @@ For screen size >= 481px
             justify-content: center;
   }
   /* Columns vertical align
-	----------------------------------*/
+    ----------------------------------*/
   .zg-xs-top {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -480,7 +480,7 @@ For screen size >= 481px
             align-items: flex-end;
   }
   /* Spacing between columns
-	------------------------*/
+    ------------------------*/
   .zg-xs-gutter {
     margin-left: -15px;
     margin-right: -15px;
@@ -512,7 +512,7 @@ For screen size >= 481px
     padding: 0;
   }
   /* Vertical gutter
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-xs-v-gutter > * {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -530,7 +530,7 @@ For screen size >= 481px
     padding-bottom: 0;
   }
   /* Columns horizontal direction
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-xs-row-reverse {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -544,7 +544,7 @@ For screen size >= 481px
             flex-direction: row;
   }
   /* Columns vertical direction
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-xs-column-reverse {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -568,7 +568,7 @@ For screen size >= 481px
             flex-grow: 1;
   }
   /* Spacing
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-xs-space-between {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -579,7 +579,7 @@ For screen size >= 481px
         justify-content: space-around;
   }
   /* Columns wrapping in multiple lines
-	------------------------------------------*/
+    ------------------------------------------*/
   .zg-xs-nowrap {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -589,7 +589,7 @@ For screen size >= 481px
         flex-wrap: wrap;
   }
   /* Grid container, columns show or hide
-	--------------------------------------------*/
+    --------------------------------------------*/
   .zg-xs-hide,
   [class*="zg"] > .cell-xs-hide {
     display: none;
@@ -600,7 +600,7 @@ For screen size >= 481px
     display: initial;
   }
   /* Column self vertical align
-	----------------------------------*/
+    ----------------------------------*/
   [class*="zg"] > .cell-xs-top {
     -ms-flex-item-align: start;
         align-self: flex-start;
@@ -614,14 +614,14 @@ For screen size >= 481px
         align-self: center;
   }
   /* Column width auto
-	-------------------------*/
+    -------------------------*/
   [class*="zg"] > .cell-xs-auto {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
   }
   /* Text align
-	------------------*/
+    ------------------*/
   .text-xs-right {
     text-align: right;
   }
@@ -705,7 +705,7 @@ For screen size >= 769px
     max-width: 8.33333%;
   }
   /* Columns horizontal align
-	-------------------------*/
+    -------------------------*/
   .zg-sm-start {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -722,7 +722,7 @@ For screen size >= 769px
             justify-content: center;
   }
   /* Columns vertical align
-	----------------------------------*/
+    ----------------------------------*/
   .zg-sm-top {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -739,7 +739,7 @@ For screen size >= 769px
             align-items: flex-end;
   }
   /* Spacing between columns
-	------------------------*/
+    ------------------------*/
   .zg-sm-gutter {
     margin-left: -15px;
     margin-right: -15px;
@@ -771,7 +771,7 @@ For screen size >= 769px
     padding: 0;
   }
   /* Vertical gutter
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-sm-v-gutter > * {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -789,7 +789,7 @@ For screen size >= 769px
     padding-bottom: 0;
   }
   /* Columns horizontal direction
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-sm-row-reverse {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -803,7 +803,7 @@ For screen size >= 769px
             flex-direction: row;
   }
   /* Columns vertical direction
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-sm-column-reverse {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -827,7 +827,7 @@ For screen size >= 769px
             flex-grow: 1;
   }
   /* Spacing
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-sm-space-between {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -838,7 +838,7 @@ For screen size >= 769px
         justify-content: space-around;
   }
   /* Columns wrapping in multiple lines
-	------------------------------------------*/
+    ------------------------------------------*/
   .zg-sm-nowrap {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -848,7 +848,7 @@ For screen size >= 769px
         flex-wrap: wrap;
   }
   /* Grid container, columns show or hide
-	--------------------------------------------*/
+    --------------------------------------------*/
   .zg-sm-hide,
   [class*="zg"] > .cell-sm-hide {
     display: none;
@@ -859,7 +859,7 @@ For screen size >= 769px
     display: initial;
   }
   /* Column self vertical align
-	----------------------------------*/
+    ----------------------------------*/
   [class*="zg"] > .cell-sm-top {
     -ms-flex-item-align: start;
         align-self: flex-start;
@@ -873,14 +873,14 @@ For screen size >= 769px
         align-self: center;
   }
   /* Column width auto
-	-------------------------*/
+    -------------------------*/
   [class*="zg"] > .cell-sm-auto {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
   }
   /* Text align
-	------------------*/
+    ------------------*/
   .text-sm-right {
     text-align: right;
   }
@@ -964,7 +964,7 @@ For screen size >= 981px
     max-width: 8.33333%;
   }
   /* Columns horizontal align
-	-------------------------*/
+    -------------------------*/
   .zg-md-start {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -981,7 +981,7 @@ For screen size >= 981px
             justify-content: center;
   }
   /* Columns vertical align
-	----------------------------------*/
+    ----------------------------------*/
   .zg-md-top {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -998,7 +998,7 @@ For screen size >= 981px
             align-items: flex-end;
   }
   /* Spacing between columns
-	------------------------*/
+    ------------------------*/
   .zg-md-gutter {
     margin-left: -15px;
     margin-right: -15px;
@@ -1030,7 +1030,7 @@ For screen size >= 981px
     padding: 0;
   }
   /* Vertical gutter
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-md-v-gutter > * {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -1048,7 +1048,7 @@ For screen size >= 981px
     padding-bottom: 0;
   }
   /* Columns horizontal direction
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-md-row-reverse {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -1062,7 +1062,7 @@ For screen size >= 981px
             flex-direction: row;
   }
   /* Columns vertical direction
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-md-column-reverse {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1086,7 +1086,7 @@ For screen size >= 981px
             flex-grow: 1;
   }
   /* Spacing
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-md-space-between {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1097,7 +1097,7 @@ For screen size >= 981px
         justify-content: space-around;
   }
   /* Columns wrapping in multiple lines
-	------------------------------------------*/
+    ------------------------------------------*/
   .zg-md-nowrap {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -1107,7 +1107,7 @@ For screen size >= 981px
         flex-wrap: wrap;
   }
   /* Grid container, columns show or hide
-	--------------------------------------------*/
+    --------------------------------------------*/
   .zg-md-hide,
   [class*="zg"] > .cell-md-hide {
     display: none;
@@ -1118,7 +1118,7 @@ For screen size >= 981px
     display: initial;
   }
   /* Column self vertical align
-	----------------------------------*/
+    ----------------------------------*/
   [class*="zg"] > .cell-md-top {
     -ms-flex-item-align: start;
         align-self: flex-start;
@@ -1132,14 +1132,14 @@ For screen size >= 981px
         align-self: center;
   }
   /* Column width auto
-	-------------------------*/
+    -------------------------*/
   [class*="zg"] > .cell-md-auto {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
   }
   /* Text align
-	------------------*/
+    ------------------*/
   .text-md-right {
     text-align: right;
   }
@@ -1223,7 +1223,7 @@ For screen size >= 1201px
     max-width: 8.33333%;
   }
   /* Columns horizontal align
-	-------------------------*/
+    -------------------------*/
   .zg-lg-start {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -1240,7 +1240,7 @@ For screen size >= 1201px
             justify-content: center;
   }
   /* Columns vertical align
-	----------------------------------*/
+    ----------------------------------*/
   .zg-lg-top {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -1257,7 +1257,7 @@ For screen size >= 1201px
             align-items: flex-end;
   }
   /* Spacing between columns
-	------------------------*/
+    ------------------------*/
   .zg-lg-gutter {
     margin-left: -15px;
     margin-right: -15px;
@@ -1289,7 +1289,7 @@ For screen size >= 1201px
     padding: 0;
   }
   /* Vertical gutter
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-lg-v-gutter > * {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -1307,7 +1307,7 @@ For screen size >= 1201px
     padding-bottom: 0;
   }
   /* Columns horizontal direction
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-lg-row-reverse {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -1321,7 +1321,7 @@ For screen size >= 1201px
             flex-direction: row;
   }
   /* Columns vertical direction
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-lg-column-reverse {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1345,7 +1345,7 @@ For screen size >= 1201px
             flex-grow: 1;
   }
   /* Spacing
-	-----------------------------------------*/
+    -----------------------------------------*/
   .zg-lg-space-between {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1356,7 +1356,7 @@ For screen size >= 1201px
         justify-content: space-around;
   }
   /* Columns wrapping in multiple lines
-	------------------------------------------*/
+    ------------------------------------------*/
   .zg-lg-nowrap {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -1366,7 +1366,7 @@ For screen size >= 1201px
         flex-wrap: wrap;
   }
   /* Grid container, columns show or hide
-	--------------------------------------------*/
+    --------------------------------------------*/
   .zg-lg-hide,
   [class*="zg"] > .cell-lg-hide {
     display: none;
@@ -1377,7 +1377,7 @@ For screen size >= 1201px
     display: initial;
   }
   /* Column self vertical align
-	----------------------------------*/
+    ----------------------------------*/
   [class*="zg"] > .cell-lg-top {
     -ms-flex-item-align: start;
         align-self: flex-start;
@@ -1391,14 +1391,14 @@ For screen size >= 1201px
         align-self: center;
   }
   /* Column width auto
-	-------------------------*/
+    -------------------------*/
   [class*="zg"] > .cell-lg-auto {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
   }
   /* Text align
-	------------------*/
+    ------------------*/
   .text-lg-right {
     text-align: right;
   }
